@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrategiX-AI: Praktické AI Workshopy pro Podnikatele</title>
+    <meta name="description" content="Naučte se efektivně využívat AI nástroje jako ChatGPT a Midjourney pro váš byznys. Nabízíme workshopy pro freelancery a OSVČ. Vedou advokát a fotograf.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #1A1A1A;
+            color: #E6F1FF;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .accent-color {
+            color: #64FFDA;
+        }
+        .bg-accent {
+            background-color: #64FFDA;
+        }
+        .border-accent {
+            border-color: #64FFDA;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
+        }
+        .bento-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .bento-item {
+            background-color: #2a2a2e;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#1A1A1A]/80 backdrop-blur-sm sticky top-0 z-50 w-full border-b border-gray-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">StrategiX<span class="accent-color">-AI</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-gray-300 transition">O nás</a>
+                <a href="#workshops" class="hover:text-gray-300 transition">Workshopy</a>
+                <a href="#portfolio" class="hover:text-gray-300 transition">Ukázky</a>
+                <a href="#contact" class="hover:text-gray-300 transition">Kontakt</a>
+            </nav>
+            <a href="#workshops" class="hidden md:inline-block bg-accent text-[#1A1A1A] font-bold py-2 px-6 rounded-lg cta-button">Vybrat Workshop</a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block hover:text-gray-300 transition">O nás</a>
+            <a href="#workshops" class="block hover:text-gray-300 transition">Workshopy</a>
+            <a href="#portfolio" class="block hover:text-gray-300 transition">Ukázky</a>
+            <a href="#contact" class="block hover:text-gray-300 transition">Kontakt</a>
+            <a href="#workshops" class="mt-4 inline-block bg-accent text-[#1A1A1A] font-bold py-2 px-6 rounded-lg cta-button">Vybrat Workshop</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 1)), url('https://placehold.co/1920x1080/1A1A1A/1A1A1A?text=');">
+            <div class="container mx-auto px-6 text-center">
+                <div class="md:flex items-center justify-center">
+                    <div class="md:w-1/2 md:pr-12">
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Ovládněte umělou inteligenci a získejte <span class="accent-color">náskok</span> ve svém podnikání.</h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-8">Praktické AI workshopy pro freelancery, OSVČ a malé firmy. Vedou advokát a fotograf.</p>
+                        <a href="#workshops" class="bg-accent text-[#1A1A1A] font-bold py-4 px-10 rounded-lg text-lg cta-button">Prozkoumat Workshopy</a>
+                    </div>
+                    <div class="mt-10 md:mt-0 md:w-1/2 flex justify-center space-x-4">
+                         <img src="Gabo2.jpg" alt="Gabriel Kožík" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-gray-700 shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/2a2a2e/E6F1FF?text=Gabo';">
+                         <img src="Libor.jpg" alt="Libor Šuhajda" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-gray-700 shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/256x256/2a2a2e/E6F1FF?text=Libor';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Poznáváte se?</h2>
+                <p class="text-lg text-gray-400 mb-12">AI je příležitost, ne hrozba.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-[#2a2a2e] p-8 rounded-lg">
+                        <div class="text-4xl mb-4 accent-color">⏱️</div>
+                        <h3 class="text-xl font-bold mb-2">Ztráta času</h3>
+                        <p class="text-gray-400">Trávíte hodiny tvorbou textů a grafiky, které by AI zvládla za minuty?</p>
+                    </div>
+                    <div class="bg-[#2a2a2e] p-8 rounded-lg">
+                        <div class="text-4xl mb-4 accent-color">📉</div>
+                        <h3 class="text-xl font-bold mb-2">Nízká kvalita</h3>
+                        <p class="text-gray-400">Vaše marketingové materiály postrádají profesionální úroveň, ale na agenturu nemáte rozpočet?</p>
+                    </div>
+                    <div class="bg-[#2a2a2e] p-8 rounded-lg">
+                        <div class="text-4xl mb-4 accent-color">🏃‍♂️</div>
+                        <h3 class="text-xl font-bold mb-2">Konkurence</h3>
+                        <p class="text-gray-400">Cítíte, že vám konkurence utíká, protože nevyužíváte moderní nástroje?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-[#2a2a2e]">
+            <div class="container mx-auto px-6">
+                <div class="md:flex items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Spojení, které dává smysl: <br><span class="accent-color">Analytická přesnost a kreativní vize.</span></h2>
+                        <p class="text-gray-400 mb-6">Gabriel vás naučí, <span class="font-bold text-white">co</span> říct. Libor vás naučí, <span class="font-bold text-white">jak</span> to ukázat. Společně vám dáme strategii, jak s AI efektivně komunikovat.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl font-bold">Gabriel Kožík</h3>
+                                <p class="text-gray-400">Jako advokát přistupuji k problémům s důrazem na dekonstrukci, logickou argumentaci a precizní použití jazyka. Tyto dovednosti jsou klíčové pro tvorbu efektivních textových promptů, které AI přesně pochopí a doručí požadovaný výsledek.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">Libor Šuhajda</h3>
+                                <p class="text-gray-400">Jako fotograf mistrně ovládám kompozici, vizuální vyprávění a emocionální dopad obrazu. Naučím vás, jak tyto principy aplikovat při generování působivých AI obrazů, které zaujmou a prodávají.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <div class="relative">
+                           <img src="Gabo2.jpg" alt="Gabriel Kožík při práci" class="rounded-lg shadow-2xl w-full" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A1A1A/E6F1FF?text=Gabo';">
+                           <img src="Libor.jpg" alt="Libor Šuhajda při práci" class="rounded-lg shadow-2xl w-2/3 absolute -bottom-10 -left-10 border-4 border-[#1A1A1A]" onerror="this.onerror=null;this.src='https://placehold.co/400x267/1A1A1A/E6F1FF?text=Libor';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ukázky naší <span class="accent-color">AI tvorby</span></h2>
+                <div class="bento-grid">
+                    <div class="bento-item md:col-span-2">
+                        <img src="https://placehold.co/600x400/1A1A1A/64FFDA?text=AI+Logo+Concept" alt="AI logo" class="rounded-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A1A1A/64FFDA?text=AI+Logo';">
+                        <p class="text-sm mt-2 text-gray-400">Koncept loga pro fiktivní kavárnu. Vytvořeno v Ideogram AI.</p>
+                    </div>
+                    <div class="bento-item">
+                        <h4 class="text-lg font-bold mb-2 accent-color">Prodejní text pro e-shop</h4>
+                        <p class="text-gray-400">"Objevte kouzlo ručně vyráběných svíček, které promění váš domov v oázu klidu. Každý kus je originál, stvořený s láskou a péčí. Zapalte si tu svou a nechte se unést vůní pohody."</p>
+                        <p class="text-sm mt-4 text-gray-500">Vygenerováno pomocí ChatGPT-4.</p>
+                    </div>
+                    <div class="bento-item">
+                        <img src="https://placehold.co/600x400/1A1A1A/64FFDA?text=Product+Mockup" alt="AI product mockup" class="rounded-md w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A1A1A/64FFDA?text=Mockup';">
+                        <p class="text-sm mt-2 text-gray-400">Vizualizace produktu. Vytvořeno v Midjourney.</p>
+                    </div>
+                    <div class="bento-item md:col-span-2">
+                        <h4 class="text-lg font-bold mb-2 accent-color">Příspěvek pro Instagram</h4>
+                        <p class="text-gray-400">"Víkend volá po dobrodružství! 🌲 Kam vyrazíte vy? Dejte nám vědět do komentářů! #vikend #priroda #cestovani"</p>
+                        <img src="https://placehold.co/600x300/1A1A1A/64FFDA?text=Instagram+Post" alt="AI Instagram post" class="rounded-md w-full h-auto object-cover mt-4" onerror="this.onerror=null;this.src='https://placehold.co/600x300/1A1A1A/64FFDA?text=Post';">
+                        <p class="text-sm mt-2 text-gray-500">Text i obrázek vytvořen s pomocí AI.</p>
+                    </div>
+                </div>
+                 <p class="text-center mt-4 text-gray-500 text-sm">* Všechny ukázky byly vytvořeny pomocí nástrojů, které vás na workshopech naučíme používat.</p>
+            </div>
+        </section>
+
+        <!-- Workshops Section -->
+        <section id="workshops" class="py-20 bg-[#2a2a2e]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Naše <span class="accent-color">Workshopy</span></h2>
+                
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="py-4 px-6 bg-gray-700/50 font-bold uppercase text-sm text-gray-300 border-b border-gray-600">Funkce</th>
+                                <th class="py-4 px-6 bg-gray-700/50 font-bold uppercase text-sm accent-color border-b border-gray-600">Masterclass Tišnov</th>
+                                <th class="py-4 px-6 bg-gray-700/50 font-bold uppercase text-sm text-gray-300 border-b border-gray-600">AI Základy (Text)</th>
+                                <th class="py-4 px-6 bg-gray-700/50 font-bold uppercase text-sm text-gray-300 border-b border-gray-600">AI Grafika (Obraz)</th>
+                                <th class="py-4 px-6 bg-gray-700/50 font-bold uppercase text-sm text-gray-300 border-b border-gray-600">AI Marketing (Komplet)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-700/30">
+                                <td class="py-4 px-6 border-b border-gray-700">Pro koho je určen</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Podnikatelé z Tišnova a okolí</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Freelanceři, OSVČ, začátečníci</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Grafici, marketéři, kreativci</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Všichni, kdo chtějí kompletní řešení</td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/30">
+                                <td class="py-4 px-6 border-b border-gray-700">Co se naučíte</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Komplexní přehled + networking</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Efektivní práce s ChatGPT, Gemini</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Tvorba log, vizuálů v Midjourney, Ideogram</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Strategie pro text i grafiku, plánování</td>
+                            </tr>
+                            <tr class="hover:bg-gray-700/30">
+                                <td class="py-4 px-6 border-b border-gray-700">Hlavní přínos</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Náskok v regionu, komunita</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Ušetříte 10+ hodin týdně</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Vizuály bez drahého grafika</td>
+                                <td class="py-4 px-6 border-b border-gray-700">Zvýšíte dopad svého marketingu</td>
+                            </tr>
+                             <tr class="hover:bg-gray-700/30">
+                                <td class="py-4 px-6 border-b border-gray-700">Délka</td>
+                                <td class="py-4 px-6 border-b border-gray-700">6 hodin</td>
+                                <td class="py-4 px-6 border-b border-gray-700">4 hodiny</td>
+                                <td class="py-4 px-6 border-b border-gray-700">4 hodiny</td>
+                                <td class="py-4 px-6 border-b border-gray-700">5 hodin</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6">Cena</td>
+                                <td class="py-4 px-6 font-bold text-lg">4 990 Kč</td>
+                                <td class="py-4 px-6 font-bold text-lg">2 990 Kč</td>
+                                <td class="py-4 px-6 font-bold text-lg">2 990 Kč</td>
+                                <td class="py-4 px-6 font-bold text-lg">3 990 Kč</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-12">
+                     <a href="#contact" class="bg-accent text-[#1A1A1A] font-bold py-4 px-10 rounded-lg text-lg cta-button">Chci se přihlásit</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="md:flex gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-8">Proč si vybrat <span class="accent-color">právě nás?</span></h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="accent-color mr-3 mt-1">✓</span>
+                                <div><span class="font-bold">Unikátní spojení:</span> Právník a fotograf – strategie a kreativita v jednom.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="accent-color mr-3 mt-1">✓</span>
+                                <div><span class="font-bold">Prakticky zaměřeno:</span> Žádná teorie, jen postupy, které okamžitě využijete.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="accent-color mr-3 mt-1">✓</span>
+                                <div><span class="font-bold">Lokální pro Tišnov:</span> Jsme odsud a rozumíme potřebám místních podnikatelů.</div>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="accent-color mr-3 mt-1">✓</span>
+                                <div><span class="font-bold">Nejnovější nástroje:</span> Školíme na aktuálních verzích AI modelů.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                         <div class="bg-[#2a2a2e] p-8 rounded-lg">
+                            <p class="text-gray-400 italic mb-4">"Díky workshopu teď tvořím obsah pro sociální sítě třikrát rychleji a kvalita je nesrovnatelně vyšší. Konečně mám čas věnovat se tomu, co je pro mé podnikání opravdu důležité."</p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/50x50/E6F1FF/1A1A1A?text=JP" alt="Jana Podnikavá" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-bold">Jana Podnikavá</p>
+                                    <p class="text-sm text-gray-500">Majitelka e-shopu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-[#2a2a2e]">
+            <div class="container mx-auto px-6">
+                <div class="md:flex items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Jste připraveni začít pracovat <span class="accent-color">chytřeji, ne více?</span></h2>
+                        <p class="text-gray-400">Vyplňte formulář a my se vám ozveme s detaily k vybranému workshopu. Udělejte první krok k efektivnějšímu podnikání ještě dnes.</p>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <form action="#" method="POST" class="space-y-4">
+                            <input type="text" name="name" placeholder="Vaše jméno" class="w-full p-4 rounded-lg bg-[#1A1A1A] border border-gray-700 focus:outline-none focus:border-accent" required>
+                            <input type="email" name="email" placeholder="Váš e-mail" class="w-full p-4 rounded-lg bg-[#1A1A1A] border border-gray-700 focus:outline-none focus:border-accent" required>
+                            <select name="workshop" class="w-full p-4 rounded-lg bg-[#1A1A1A] border border-gray-700 focus:outline-none focus:border-accent" required>
+                                <option value="" disabled selected>Vyberte workshop...</option>
+                                <option value="masterclass">Masterclass Tišnov</option>
+                                <option value="text">AI Základy (Text)</option>
+                                <option value="graphics">AI Grafika (Obraz)</option>
+                                <option value="marketing">AI Marketing (Komplet)</option>
+                            </select>
+                            <textarea name="message" placeholder="Vaše zpráva (volitelné)" rows="4" class="w-full p-4 rounded-lg bg-[#1A1A1A] border border-gray-700 focus:outline-none focus:border-accent"></textarea>
+                            <button type="submit" class="w-full bg-accent text-[#1A1A1A] font-bold py-4 px-10 rounded-lg text-lg cta-button">Odeslat přihlášku</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1A1A] border-t border-gray-700 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 StrategiX-AI. Všechna práva vyhrazena.</p>
+            <p class="text-sm mt-2">Tvorba webu s láskou v Tišnově.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
